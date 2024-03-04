@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Crie uma instância da classe Random
+        Random random = new Random();
+
+        // Defina o comprimento do código
+        int comprimentoCodigo = 6;
+
+        // Crie um array de caracteres para escolher
+        string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        // Crie uma string para armazenar o código aleatório
+        char[] codigo = new char[comprimentoCodigo];
+
+        // Preencha o código com caracteres aleatórios
+        for (int i = 0; i < comprimentoCodigo; i++)
+        {
+            codigo[i] = caracteres[random.Next(caracteres.Length)];
+        }
+
+        // Converta o array de caracteres em uma string
+        string codigoAleatorio = new String(codigo);
+
+        // Exiba o código aleatório
+        Console.WriteLine("Código Aleatório: " + codigoAleatorio);
+    }
+}
